@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="115dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo_collapp2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rose_cake_personal_use"
+            android:text="(CollApp)"
+            android:textSize="65sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/samantha"
+            android:text="Registration"
+            android:textAlignment="center"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/et_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="65dp"
+            android:background="@drawable/round_et"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Firstname"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="65dp"
+            android:background="@drawable/round_et"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Lastname"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_remail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="65dp"
+            android:background="@drawable/round_et"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/et_rpassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="65dp"
+            android:background="@drawable/round_et"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/et_rpasswordrepeat"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="65dp"
+            android:background="@drawable/round_et"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Repeat password"
+            android:inputType="textPassword" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_wrap_it_up"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="120dp"
+            android:background="@drawable/round_btn"
+            android:fontFamily="@font/roboto_light"
+            android:text="Wrap it up!"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blue_wave"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"
+        android:scaleType="matrix"/>
+
+</LinearLayout>

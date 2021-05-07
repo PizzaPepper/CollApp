@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CollApp</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_stats">Statistics</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorite">Favorites</string>
+    <string name="title_user">User</string>
 </resources>
