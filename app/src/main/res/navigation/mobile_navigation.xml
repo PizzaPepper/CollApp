@@ -22,4 +22,9 @@
         android:name="VEM.Movil.collapp.ui.user.UserFragment"
         android:label="@string/title_user"
         tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/navigation_project"
+        android:name="VEM.Movil.collapp.project_detail"
+        android:label="project"
+        tools:layout="@layout/fragment_project_detail" />
 </navigation>
