@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val intent = Intent(this, Login::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
 
         Handler().postDelayed({
             startActivity(intent)

@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_user" />
     <fragment
         android:id="@+id/navigation_project"
-        android:name="VEM.Movil.collapp.project_detail"
+        android:name="VEM.Movil.collapp.Project_Detail_Fragment"
         android:label="project"
         tools:layout="@layout/fragment_project_detail" />
 </navigation>
