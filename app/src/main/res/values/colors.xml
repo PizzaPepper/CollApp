@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <!-- My Colors -->
+
+    <color name="btnColor">#94AFD5</color>
+    <color name="btnchooseimg">#BEBEBE</color>
+    <color name="navBackground">#AFA5CF</color>
+    <color name="waveColor">#D0CAE4</color>
 </resources>
