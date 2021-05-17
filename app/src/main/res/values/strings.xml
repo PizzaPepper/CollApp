@@ -5,4 +5,7 @@
     <string name="title_home">Home</string>
     <string name="title_favorite">Favorites</string>
     <string name="title_user">User</string>
+    <string name="title_new_project">New Project</string>
+    <string name="title_detail_project">Detail Project</string>
+
 </resources>

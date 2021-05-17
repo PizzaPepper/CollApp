@@ -9,7 +9,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- My Colors -->
+    <color name="hintColor">#989898</color>
+    <color name="rose_cake_color">#707070</color>
     <color name="btnColor">#94AFD5</color>
-
+    <color name="btnchooseimg">#BEBEBE</color>
+    <color name="navBackground">#AFA5CF</color>
+    <color name="waveColor">#D0CAE4</color>
 
 </resources>
