@@ -1,8 +1,9 @@
 package VEM.Movil.collapp
 
 import android.os.Bundle
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -13,6 +14,8 @@ import kotlinx.android.synthetic.main.fragment_home.*
 class Home : AppCompatActivity() {
 
     companion object{
+        lateinit var email:String
+        lateinit var name: String
         //TODO: Ingresar variables de la informacion del usuario
     }
 
@@ -22,6 +25,16 @@ class Home : AppCompatActivity() {
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         supportActionBar!!.hide()
+
+
+
+        var bundle = intent.extras
+
+        if(bundle != null){
+            email = bundle.getString("email").toString()
+            name = bundle.getString("name").toString()
+
+        }
 
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each

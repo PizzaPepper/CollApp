@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:801345588319:android:f6a4153ebc2572d4ea5fea",
+        "mobilesdk_app_id": "1:801345588319:android:1142a09f11931d3eea5fea",
         "android_client_info": {
-          "package_name": "VEM.Movil.collap"
+          "package_name": "VEM.Movil.collapp"
         }
       },
       "oauth_client": [
