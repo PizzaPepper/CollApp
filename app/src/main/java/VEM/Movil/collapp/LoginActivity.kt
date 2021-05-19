@@ -11,7 +11,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
+        supportActionBar!!.hide()
         tv_signup.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)

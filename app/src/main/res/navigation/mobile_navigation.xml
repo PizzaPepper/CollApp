@@ -22,15 +22,5 @@
         android:name="VEM.Movil.collapp.ui.user.UserFragment"
         android:label="@string/title_user"
         tools:layout="@layout/fragment_user" />
-    <fragment
-        android:id="@+id/navigation_new_project"
-        android:name="VEM.Movil.collapp.NewProjectFragment"
-        android:label="@string/title_new_project"
-        tools:layout="@layout/fragment_new_project" />
 
-    <fragment
-        android:id="@+id/navigation_project_detail"
-        android:name="VEM.Movil.collapp.ProjectDetail1Fragment"
-        android:label="@string/title_detail_project"
-        tools:layout="@layout/fragment_project_detail" />
 </navigation>

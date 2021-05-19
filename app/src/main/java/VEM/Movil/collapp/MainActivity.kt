@@ -10,7 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        supportActionBar!!.hide()
+        //getSupportActionBar().hide()
 
         val intent = Intent(this, LoginActivity::class.java)
 

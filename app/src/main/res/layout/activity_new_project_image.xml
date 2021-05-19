@@ -1,40 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewProjectImageActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
 
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/png_logo_collapp2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageButton
+            android:id="@+id/btn_cancelNewProject"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/btn_actions"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tv_name_project"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:fontFamily="@font/samantha"
                 android:text="Choose your image"
-                android:textSize="25dp"
                 android:textAlignment="center"
-                android:fontFamily="@font/samantha"/>
+                android:textSize="25dp" />
 
 
             <ScrollView
@@ -49,11 +69,13 @@
                     android:layout_marginEnd="50dp"
                     android:columnCount="3"
                     android:orientation="horizontal"
+                    android:alignmentMode="alignMargins"
                     android:useDefaultMargins="true">
 
 
                     <ImageView
                         android:id="@+id/acorn"
+
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/png_001_acorn" />
@@ -227,25 +249,25 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/png_030_beach" />
-
-
                 </GridLayout>
-
-
             </ScrollView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <Button
+                    android:id="@+id/fine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_btn"
+                    android:text="This looks fine"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
-        <Button
-            android:id="@+id/fine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginRight="130dp"
-            android:layout_marginBottom="100dp"
-            android:background="@drawable/round_btn"
-            android:text="This looks fine"
 
-            />
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 </LinearLayout>

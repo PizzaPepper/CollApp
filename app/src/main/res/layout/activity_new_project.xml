@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewProjectActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/png_logo_collapp2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_cancelNewProject"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/btn_actions"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/samantha"
+                    android:text="New Project"
+                    android:textAlignment="center"
+                    android:textSize="25sp"></TextView>
+
+                <Button
+                    android:id="@+id/btn_chooseImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="91dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_btn_chooseimg"
+                    android:backgroundTint="@color/btnchooseimg"
+                    android:text="Choose\nproject\nimage"
+                    android:textAllCaps="false" />
+
+                <ImageView
+                    android:id="@+id/img_chooseimgfill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/et_ProjectName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_et"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_light"
+                    android:hint="Project name"
+                    android:inputType="text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_StartDate"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/round_et"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="Start date"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/et_deadline"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/round_et"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="Deadline"
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/samantha"
+                        android:text="Stages"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_addnewstage"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="-25dp"
+                        android:layout_marginTop="15dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/btn_actions"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_plus" />
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/gv_Stages"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:numColumns="1"></GridView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="You can add up to 4 stages"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_Ready_NewProject"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="120dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/round_btn"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="Ready!"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/png_blue_wave"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

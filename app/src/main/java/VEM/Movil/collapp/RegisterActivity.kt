@@ -11,6 +11,9 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        supportActionBar!!.hide()
+
+
         btn_wrap_it_up.setOnClickListener {
             if(checkAllFields()){
             //TODO: code Firebase
