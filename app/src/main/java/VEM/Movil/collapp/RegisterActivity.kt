@@ -24,8 +24,9 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         supportActionBar!!.hide()
+        db = FirebaseFirestore.getInstance();
         auth = Firebase.auth
-
+        
         btn_wrap_it_up.setOnClickListener {
             val email = et_remail.text.toString()
             val pass = et_rpassword.text.toString()
@@ -33,8 +34,8 @@ class RegisterActivity : AppCompatActivity() {
             val ln = et_lastname.text.toString()
             if (checkAllFields()) {
                 // Code Firebase
+                registerDataBaseFirebase(email,pass,fn,ln)
                 registerFirebase(email, pass, fn)
-                //registerDataBaseFirebase(email,pass,fn,ln)
             }
         }
     }
