@@ -12,10 +12,10 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_width="59dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/png_logo_collapp2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -25,9 +25,10 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
             android:adjustViewBounds="true"
+            android:tint="@color/btnchooseimg"
             android:background="@drawable/btn_actions"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_cancel"
@@ -147,16 +148,29 @@
                         android:layout_marginLeft="-25dp"
                         android:layout_marginTop="15dp"
                         android:adjustViewBounds="true"
+                        android:tint="@color/btnchooseimg"
                         android:background="@drawable/btn_actions"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_plus" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/png_blue_wave"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
 
-                <GridView
-                    android:id="@+id/gv_Stages"
+                <ListView
+                    android:id="@+id/lv_Stages"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:numColumns="1"></GridView>
+                    android:numColumns="1"></ListView>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -187,20 +201,6 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/png_blue_wave"
-            app:layout_constraintBottom_toBottomOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </RelativeLayout>
