@@ -24,7 +24,10 @@ class NewProjectActivity : AppCompatActivity() {
 
         addStage()
 
-
+        btn_addnewstage.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
 
         supportActionBar!!.hide()
 
@@ -42,6 +45,11 @@ class NewProjectActivity : AppCompatActivity() {
 
     fun addStage(){
 
+    }
+
+
+    fun DialogOnClic (view: View){
+        CustomDialog_NewStage().show(supportFragmentManager, "Add New Stage")
     }
 
     private class AdaptadorStages:BaseAdapter{

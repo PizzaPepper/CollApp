@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomDialog_NewStage"
+    android:orientation="vertical">
+
+    <ImageButton
+            android:id="@+id/btn_cancelNewStage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/btn_actions"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_cancel"
+            android:tint="@color/btnchooseimg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:padding="5dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="New Stage"
+        android:textAlignment="textStart"
+        android:textSize="25sp"
+        android:textColor="@color/navBackground"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/et_StageName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/round_et"
+        android:ems="10"
+        android:fontFamily="@font/roboto_light"
+        android:hint="New Stage Name"
+        android:inputType="text" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Add_New_Stage"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_btn"
+        android:fontFamily="@font/roboto_light"
+        android:text="Add Stage!"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
