@@ -8,7 +8,9 @@
         android:id="@+id/gridview_stages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnCount="3"
+        android:stretchMode="columnWidth"
+        android:horizontalSpacing="15dp"
+        android:numColumns="3"
         />
 
 </LinearLayout>

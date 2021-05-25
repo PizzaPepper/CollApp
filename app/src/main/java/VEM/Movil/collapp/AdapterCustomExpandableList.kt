@@ -4,7 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.BaseExpandableListAdapter
+import android.widget.GridView
+import android.widget.ImageView
+import android.widget.TextView
 
 class AdapterCustomExpandableList : BaseExpandableListAdapter {
     private var listStages = ArrayList<Stage>()
@@ -56,16 +59,13 @@ class AdapterCustomExpandableList : BaseExpandableListAdapter {
         var tv_name_stage: TextView = view.findViewById(R.id.tv_name_stage)
         var ic_arrows: ImageView = view.findViewById(R.id.ic_arrows)
 
-        if(isExpanded){
+        if (isExpanded) {
             ic_arrows.setImageResource(R.drawable.ic_arrow_open)
-        }else{
+        } else {
             ic_arrows.setImageResource(R.drawable.ic_arrow_close)
         }
 
         tv_name_stage.text = stageName
-        ic_arrows.setOnClickListener {
-            Toast.makeText(view.context, "Click Arrow", Toast.LENGTH_SHORT).show()
-        }
 
         return view
     }
@@ -77,7 +77,7 @@ class AdapterCustomExpandableList : BaseExpandableListAdapter {
         convertView: View?,
         parent: ViewGroup?
     ): View {
-        val stages: ArrayList<String> = listStages[childPosition].stagesNames
+        val stages: ArrayList<String> = listStages[groupPosition].stagesNames
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.list_items_stages, null)
 

@@ -66,11 +66,13 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/round_et"
+                android:textColor="@color/black"
                 android:ems="10"
                 android:hint="Stage name"
                 android:inputType="text" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save_stage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="50dp"

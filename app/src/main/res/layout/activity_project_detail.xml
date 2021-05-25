@@ -104,6 +104,7 @@
                         android:id="@+id/list_stages_exp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:groupIndicator="@null"
                         android:divider="@null"
                         android:dividerHeight="10dp"/>
                 </LinearLayout>
