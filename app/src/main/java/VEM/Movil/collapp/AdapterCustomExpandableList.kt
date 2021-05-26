@@ -36,7 +36,7 @@ class AdapterCustomExpandableList : BaseExpandableListAdapter {
     }
 
     override fun getChild(groupPosition: Int, childPosition: Int): Any {
-        return this.listStages[groupPosition].stagesNames[childPosition]
+        return this.listStages[groupPosition].stagesnames[childPosition]
     }
 
     override fun getGroupId(groupPosition: Int): Long {
@@ -82,7 +82,7 @@ class AdapterCustomExpandableList : BaseExpandableListAdapter {
         convertView: View?,
         parent: ViewGroup?
     ): View {
-        val stages: ArrayList<String> = listStages[groupPosition].stagesNames
+        val stages: ArrayList<String> = listStages[groupPosition].stagesnames
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.list_items_stages, null)
 

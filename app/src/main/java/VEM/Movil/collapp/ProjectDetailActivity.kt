@@ -103,7 +103,7 @@ class ProjectDetailActivity : AppCompatActivity() {
 
         project.Stages.forEach { it ->
             if (it.Name == stage) {
-                it.stagesNames.add(name)
+                it.stagesnames.add(name)
             }
         }
     }
@@ -159,6 +159,7 @@ class ProjectDetailActivity : AppCompatActivity() {
                 }
                 val liststages: ExpandableListView = findViewById(R.id.list_stages_exp)
                 val adapter = AdapterCustomExpandableList(this, project.Stages)
+                adapter.set_project(project)
                 liststages.setAdapter(adapter)
 
             }

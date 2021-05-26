@@ -142,7 +142,7 @@ class AdapterStage : BaseAdapter {
         }
 
         project.Stages.forEach { it ->
-            val l = it.stagesNames
+            val l = it.stagesnames
             val index = l.indexOf(task)
             if (index != -1) {
                 l.removeAt(index)
@@ -163,7 +163,7 @@ class AdapterStage : BaseAdapter {
 
         project.Stages.forEach { it ->
             if (it.Name == stage) {
-                it.stagesNames.add(task)
+                it.stagesnames.add(task)
             }
         }
         docMap["stages"] = list

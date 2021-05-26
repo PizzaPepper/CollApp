@@ -38,7 +38,7 @@ class AdapterProjectStage : BaseAdapter {
 
         if(stages.isNotEmpty()){
             tv_stagetext.text = stage.Name+" Tasks: "
-            tv_stagenum.text = stage.stagesNames.size.toString()
+            tv_stagenum.text = stage.stagesnames.size.toString()
         }
 
         return view
