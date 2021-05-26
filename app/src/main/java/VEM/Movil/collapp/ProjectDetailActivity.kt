@@ -2,7 +2,6 @@ package VEM.Movil.collapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.*
@@ -11,11 +10,9 @@ import androidx.appcompat.widget.AppCompatButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_project_detail.*
-import kotlinx.android.synthetic.main.stage.*
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
 
 class ProjectDetailActivity : AppCompatActivity() {
     lateinit var project: Project
@@ -82,10 +79,11 @@ class ProjectDetailActivity : AppCompatActivity() {
                 val name: String = nameStage.text.toString()
 
                 if (!name.isNullOrBlank()) {
-                    updatestage(stage, name)
+                    updateStage(stage, name)
+                    updateProject(stage, name)
                     pop.dismiss()
                 } else {
-                    Toast.makeText(view.context, "The field  '' is empty!", Toast.LENGTH_SHORT)
+                    Toast.makeText(view.context, "The field 'name' is empty!", Toast.LENGTH_SHORT)
                         .show()
                 }
             }
@@ -93,6 +91,15 @@ class ProjectDetailActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    private fun updateProject(stage: String, name: String) {
+
+        project.Stages.forEach { it ->
+            if (it.Name == stage) {
+                it.stagesNames.add(name)
+            }
+        }
     }
 
     private fun formatter(date: Date): String {
@@ -125,12 +132,12 @@ class ProjectDetailActivity : AppCompatActivity() {
         return listStr
     }
 
-    private fun updatestage(stage: String, name: String) {
+    private fun updateStage(stage: String, name: String) {
         val idProject = project.id
         var map: HashMap<String, Any>? = null
 
         db.collection("project")
-            .document(idProject)
+            .document("testing_stages") //idProject
             .get()
             .addOnSuccessListener { doc ->
                 map = doc.data as HashMap<String, Any>?
@@ -138,17 +145,25 @@ class ProjectDetailActivity : AppCompatActivity() {
 
                 map?.let {
                     db.collection("project")
-                        .document(idProject)
+                        .document("testing_stages") //idProject
                         .set(it)
                         .addOnSuccessListener {
-                            Toast.makeText(this,"Added!",Toast.LENGTH_LONG).show()
+                            Toast.makeText(this, "Added!", Toast.LENGTH_LONG).show()
                         }
                 }
+                val liststages: ExpandableListView = findViewById(R.id.list_stages_exp)
+                val adapter = AdapterCustomExpandableList(this, project.Stages)
+                liststages.setAdapter(adapter)
+
             }
 
     }
 
-    private fun setStageMap(docMap: HashMap<String, Any>?, stage: String, name: String): HashMap<String,Any>? {
+    private fun setStageMap(
+        docMap: HashMap<String, Any>?,
+        stage: String,
+        name: String
+    ): HashMap<String, Any>? {
         var list = docMap?.get("stages") as ArrayList<HashMap<String, Any>>
 
         list.forEach { s ->

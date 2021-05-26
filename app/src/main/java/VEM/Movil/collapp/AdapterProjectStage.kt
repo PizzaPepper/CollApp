@@ -46,30 +46,3 @@ class AdapterProjectStage : BaseAdapter {
 
     }
 }
-
-/*
-var listview: ListView =findViewById(R.id.listview) as ListView
-
-        var adaptador: AdaptadorProductos= AdaptadorProductos(this, salties)
-        listview.adapter=adaptador
-* */
-
-
-/*
-override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var task= task[position]
-        var inflater = LayoutInflater.from(context)
-        var view = inflater.inflate(R.layout.task_view,null)
-
-        var tv_tilte: TextView = view.findViewById(R.id.tv_title)
-        var tv_time: TextView = view.findViewById(R.id.tv_time)
-        var tv_days: TextView = view.findViewById(R.id.tv_days)
-
-        tv_tilte.setText(task.title)
-        tv_time.setText(task.time)
-        tv_days.setText(task.days.toString())
-
-        return view
-    }
-
-*/
