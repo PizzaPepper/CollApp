@@ -99,11 +99,10 @@
 
                     <EditText
                         android:id="@+id/et_StartDate"
-                        android:layout_width="170dp"
+                        android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
                         android:layout_marginTop="5dp"
-                        android:layout_marginRight="5dp"
                         android:clickable="true"
                         android:focusable="false"
                         android:maxLines="1"
@@ -114,11 +113,10 @@
 
                     <EditText
                         android:id="@+id/et_deadline"
-                        android:layout_width="match_parent"
+                        android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
                         android:layout_marginTop="5dp"
-                        android:layout_marginRight="5dp"
                         android:clickable="true"
                         android:focusable="false"
                         android:maxLines="1"
@@ -155,17 +153,7 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_plus" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="55dp"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/png_blue_wave"
-                            app:layout_constraintBottom_toBottomOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
 
                 <ListView
@@ -203,7 +191,7 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-<!--
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -215,5 +203,5 @@
             android:src="@drawable/png_blue_wave"
             app:layout_constraintBottom_toBottomOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
--->
+
 </RelativeLayout>

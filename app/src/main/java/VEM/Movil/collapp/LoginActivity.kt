@@ -24,6 +24,8 @@ class LoginActivity : AppCompatActivity() {
 
         var bundle = intent.extras
 
+
+
         if(bundle != null){
             val email: String? = bundle.getString("email")
             val pass: String? = bundle.getString("pass")

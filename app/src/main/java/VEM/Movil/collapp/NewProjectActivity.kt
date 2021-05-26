@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_new_project.*
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 
 class NewProjectActivity : AppCompatActivity() {
@@ -82,7 +83,7 @@ class NewProjectActivity : AppCompatActivity() {
         }
 
         btn_chooseImg.setOnClickListener {
-            var intent: Intent = Intent(this, NewProjectImageActivity::class.java)
+            var intent = Intent(this, NewProjectImageActivity::class.java)
             startActivity(intent)
         }
 
@@ -100,15 +101,14 @@ class NewProjectActivity : AppCompatActivity() {
         }
         btn_Ready_NewProject.setOnClickListener {
             newProject.Name = et_ProjectName.text.toString()
-
             storeProjectDB(newProject)
-
+            var intent = Intent(this, Home::class.java)
+            startActivity(intent)
         }
-
-
     }
 
     private fun storeProjectDB(newProject: Project) {
+        newProject.Name = et_ProjectName.text.toString()
         var project = hashMapOf(
             "emails" to newProject.Emails,
             "name" to newProject.Name,
@@ -126,8 +126,6 @@ class NewProjectActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 Toast.makeText(this,"Error adding document",Toast.LENGTH_LONG).show()
             }
-
-
     }
 
     private fun addStage() {

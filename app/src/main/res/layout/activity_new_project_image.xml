@@ -41,238 +41,238 @@
 
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_name_project"
+        <TextView
+            android:id="@+id/tv_name_project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/samantha"
+            android:text="Choose your image"
+            android:textAlignment="center"
+            android:textSize="25dp" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="430dp">
+            <!--¿Lista o GridView? -->
+
+            <GridLayout
+                android:id="@+id/grid_images"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/samantha"
-                android:text="Choose your image"
-                android:textAlignment="center"
-                android:textSize="25dp" />
+
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:columnCount="3"
+                android:orientation="horizontal"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="true">
 
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="430dp">
-                <!--¿Lista o GridView? -->
+                <ImageView
+                    android:id="@+id/acorn"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_001_acorn" />
 
-                <GridLayout
-                    android:id="@+id/grid_images"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/moon"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_002_moon" />
 
-                    android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
-                    android:columnCount="3"
-                    android:orientation="horizontal"
-                    android:alignmentMode="alignMargins"
-                    android:useDefaultMargins="true">
+                <ImageView
+                    android:id="@+id/wood"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_003_wood" />
 
+                <ImageView
+                    android:id="@+id/bee"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_004_bee" />
 
-                    <ImageView
-                        android:id="@+id/acorn"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_001_acorn" />
+                <ImageView
+                    android:id="@+id/tree"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_005_tree" />
 
-                    <ImageView
-                        android:id="@+id/moon"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_002_moon" />
-
-                    <ImageView
-                        android:id="@+id/wood"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_003_wood" />
-
-                    <ImageView
-                        android:id="@+id/bee"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_004_bee" />
-
-                    <ImageView
-                        android:id="@+id/tree"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_005_tree" />
-
-                    <ImageView
-                        android:id="@+id/mushroom"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                <ImageView
+                    android:id="@+id/mushroom"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
 
 
-                        android:src="@drawable/png_006_mushroom" />
+                    android:src="@drawable/png_006_mushroom" />
 
-                    <ImageView
-                        android:id="@+id/world"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_007_world" />
+                <ImageView
+                    android:id="@+id/world"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_007_world" />
 
-                    <ImageView
-                        android:id="@+id/leaf"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_008_leaf" />
+                <ImageView
+                    android:id="@+id/leaf"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_008_leaf" />
 
-                    <ImageView
-                        android:id="@+id/leaf2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_009_leaf" />
+                <ImageView
+                    android:id="@+id/leaf2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_009_leaf" />
 
-                    <ImageView
-                        android:id="@+id/tulip"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_010_tulip" />
+                <ImageView
+                    android:id="@+id/tulip"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_010_tulip" />
 
-                    <ImageView
-                        android:id="@+id/sunflower"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_011_sunflower" />
+                <ImageView
+                    android:id="@+id/sunflower"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_011_sunflower" />
 
-                    <ImageView
-                        android:id="@+id/plant"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_012_plant" />
+                <ImageView
+                    android:id="@+id/plant"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_012_plant" />
 
-                    <ImageView
-                        android:id="@+id/fields"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_013_fields" />
+                <ImageView
+                    android:id="@+id/fields"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_013_fields" />
 
-                    <ImageView
-                        android:id="@+id/cactus"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_014_cactus" />
+                <ImageView
+                    android:id="@+id/cactus"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_014_cactus" />
 
-                    <ImageView
-                        android:id="@+id/cloud"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_015_cloud" />
+                <ImageView
+                    android:id="@+id/cloud"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_015_cloud" />
 
-                    <ImageView
-                        android:id="@+id/desert"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_016_desert" />
+                <ImageView
+                    android:id="@+id/desert"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_016_desert" />
 
-                    <ImageView
-                        android:id="@+id/sun"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_017_sun" />
+                <ImageView
+                    android:id="@+id/sun"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_017_sun" />
 
-                    <ImageView
-                        android:id="@+id/forest"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_018_forest" />
+                <ImageView
+                    android:id="@+id/forest"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_018_forest" />
 
-                    <ImageView
-                        android:id="@+id/ladybug"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_019_ladybug" />
+                <ImageView
+                    android:id="@+id/ladybug"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_019_ladybug" />
 
-                    <ImageView
-                        android:id="@+id/water"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_021_water" />
+                <ImageView
+                    android:id="@+id/water"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_021_water" />
 
-                    <ImageView
-                        android:id="@+id/earth"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_022_earth" />
+                <ImageView
+                    android:id="@+id/earth"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_022_earth" />
 
-                    <ImageView
-                        android:id="@+id/snow"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_023_snow" />
+                <ImageView
+                    android:id="@+id/snow"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_023_snow" />
 
-                    <ImageView
-                        android:id="@+id/mountain"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_024_mountain" />
+                <ImageView
+                    android:id="@+id/mountain"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_024_mountain" />
 
-                    <ImageView
-                        android:id="@+id/grass"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_025_grass" />
+                <ImageView
+                    android:id="@+id/grass"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_025_grass" />
 
-                    <ImageView
-                        android:id="@+id/raid"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_026_rain" />
+                <ImageView
+                    android:id="@+id/raid"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_026_rain" />
 
-                    <ImageView
-                        android:id="@+id/fish"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_027_fish" />
+                <ImageView
+                    android:id="@+id/fish"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_027_fish" />
 
-                    <ImageView
-                        android:id="@+id/tree2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_028_tree" />
+                <ImageView
+                    android:id="@+id/tree2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_028_tree" />
 
-                    <ImageView
-                        android:id="@+id/volcano"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_029_volcano" />
+                <ImageView
+                    android:id="@+id/volcano"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_029_volcano" />
 
-                    <ImageView
-                        android:id="@+id/beach"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/png_030_beach" />
-                </GridLayout>
-            </ScrollView>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/beach"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/png_030_beach" />
+            </GridLayout>
+        </ScrollView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/fine"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/round_btn"
-                    android:text="This looks fine"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/fine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_btn"
+                android:text="This looks fine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>
