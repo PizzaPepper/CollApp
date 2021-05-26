@@ -16,7 +16,6 @@ class Home : AppCompatActivity() {
     companion object{
         lateinit var email:String
         lateinit var name: String
-        //TODO: Ingresar variables de la informacion del usuario
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

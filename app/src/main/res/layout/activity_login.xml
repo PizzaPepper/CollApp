@@ -55,7 +55,6 @@
                 android:ems="10"
                 android:fontFamily="@font/roboto_light"
                 android:hint="Email"
-                android:text="supergonzalez360@gmail.com"
                 android:inputType="textEmailAddress"
                 android:shadowColor="#989898"
                 android:textColor="@color/black" />
@@ -71,7 +70,6 @@
                 android:ems="10"
                 android:fontFamily="@font/roboto_light"
                 android:hint="Password"
-                android:text="12345678"
                 android:inputType="textPassword"
                 android:shadowColor="#989898"
                 android:textColor="@color/black" />
