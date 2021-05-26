@@ -2,14 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="170dp"
     android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginBottom="10dp"
     android:padding="10dp"
+    android:id="@+id/rootProject"
     android:background="@drawable/round_bg_project">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingLeft="10dp"
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,36 +23,32 @@
             android:layout_height="25dp"
             android:orientation="horizontal">
 
+
+
             <TextView
                 android:id="@+id/tv_name_project"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+
                 android:fontFamily="@font/roboto_light"
                 android:text="Project name"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@+id/ic_star"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
-            <!--
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:src="@drawable/ic_star_off"
-                android:layout_gravity="center"/>
-            -->
 
             <ImageButton
                 android:id="@+id/ic_star"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
                 android:background="@null"
-                android:src="@drawable/ic_star_off"
-                app:layout_constraintStart_toEndOf="@+id/tv_name_project" />
+                android:src="@drawable/btn_star_mode"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -75,36 +77,18 @@
                 android:layout_marginTop="5dp"
                 android:orientation="vertical">
 
-                <ListView
-                    android:id="@+id/list_stages"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1">
 
-                    <!--<LinearLayout
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_height="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="On going tasks:"
-                            android:textColor="@color/white"
-                            android:textSize="15sp"
-                            android:fontFamily="@font/roboto_light"/>
-                        <TextView
-                            android:id="@+id/tv_num_tasks"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:paddingLeft="5dp"
-                            android:text="5"
-                            android:textColor="@color/white"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:fontFamily="@font/roboto_light"/>
-                    </LinearLayout>-->
+                    <ListView
+                        android:id="@+id/list_stages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"
+                        android:scrollbars="vertical"
+                        android:scrollingCache="true"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        android:smoothScrollbar="true"
+                        android:layout_weight="1"/>
 
-                </ListView>
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
