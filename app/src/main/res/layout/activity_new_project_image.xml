@@ -63,8 +63,10 @@
                 <!--¿Lista o GridView? -->
 
                 <GridLayout
+                    android:id="@+id/grid_images"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:layout_marginStart="50dp"
                     android:layout_marginEnd="50dp"
                     android:columnCount="3"
@@ -75,13 +77,16 @@
 
                     <ImageView
                         android:id="@+id/acorn"
-
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/png_001_acorn" />
 
                     <ImageView
                         android:id="@+id/moon"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/png_002_moon" />

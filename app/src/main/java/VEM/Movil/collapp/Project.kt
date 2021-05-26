@@ -9,5 +9,5 @@ import kotlin.collections.ArrayList
 * o lo guardariamos literalmente en una variable (creo que es con un Int).
 * */
 
-data class Project (var Emails:ArrayList<String>,var Image:String,val Name:String,
-                    val Start_date: Date,val Deadline: Date,var Stages: ArrayList<Stage>)
+data class Project (var id:String, var Emails:ArrayList<String>, var Image:Int, var Name:String,
+                    var Start_date: Date, var Deadline: Date, var Stages: ArrayList<Stage>)
