@@ -1,5 +1,3 @@
 package VEM.Movil.collapp
 
-import java.io.Serializable
-
-data class Stage(var Name:String,var stagesNames: ArrayList<String>) :Serializable
+data class Stage(var Name:String,var stagesNames: ArrayList<String>)

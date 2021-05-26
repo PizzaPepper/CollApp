@@ -15,23 +15,5 @@
     <color name="btnchooseimg">#BEBEBE</color>
     <color name="navBackground">#AFA5CF</color>
     <color name="waveColor">#D0CAE4</color>
-    <color name="textstageColor">#4A4A4A</color>
-
-    <!-- Color Background Project -->
-    <color name="bg1">#94AFD5</color>
-    <color name="bg2">#F6AFD5</color>
-    <color name="bg3">#FFE17F</color>
-    <color name="bg4">#99D97C</color>
-
-
-
-    <array name="colorsProject">
-        <item>#94AFD5</item>
-        <item>#F6AFD5</item>
-        <item>#FFE17F</item>
-        <item>#99D97C</item>
-    </array>
-
-
 
 </resources>
