@@ -123,13 +123,14 @@
             android:textSize="@dimen/btn_text"
             android:textStyle="bold" />
     </LinearLayout>
-
+    
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/png_blue_wave"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"
+        android:layout_weight="1"
         android:scaleType="fitXY"/>
 
 </LinearLayout>

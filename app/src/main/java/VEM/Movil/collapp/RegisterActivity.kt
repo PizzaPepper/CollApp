@@ -26,7 +26,7 @@ class RegisterActivity : AppCompatActivity() {
         supportActionBar!!.hide()
         db = FirebaseFirestore.getInstance();
         auth = Firebase.auth
-        
+
         btn_wrap_it_up.setOnClickListener {
             val email = et_remail.text.toString()
             val pass = et_rpassword.text.toString()
@@ -34,8 +34,7 @@ class RegisterActivity : AppCompatActivity() {
             val ln = et_lastname.text.toString()
             if (checkAllFields()) {
                 // Code Firebase
-                registerDataBaseFirebase(email,pass,fn,ln)
-                registerFirebase(email, pass, fn)
+                registerFirebase(email, pass, fn, ln)
             }
         }
     }
@@ -109,10 +108,11 @@ class RegisterActivity : AppCompatActivity() {
             "firstname" to fn.toString(),
             "lastname" to ln.toString()
         )
+
         db.collection("users")
             .add(user)
             .addOnSuccessListener { documentReference ->
-                Log.d("${documentReference.id}", "Added user!")
+                Toast.makeText(this, "Registered!", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener { e ->
                 Log.w("Error adding document", e)
@@ -120,7 +120,13 @@ class RegisterActivity : AppCompatActivity() {
 
     }
 
-    private fun registerFirebase(email: String, password: String, firstName: String) {
+
+    private fun registerFirebase(
+        email: String,
+        password: String,
+        firstName: String,
+        lastname: String
+    ) {
         var username: UserProfileChangeRequest =
             UserProfileChangeRequest.Builder().setDisplayName(firstName).build()
 
@@ -134,14 +140,15 @@ class RegisterActivity : AppCompatActivity() {
                         baseContext, "${user.email} it was created correctly.",
                         Toast.LENGTH_SHORT
                     ).show()
+                    registerDataBaseFirebase(email, password, firstName, lastname)
                     updateUI()
                 } else {
                     // If sign in fails, display a message to the user.
                     Toast.makeText(
-                        baseContext, "Authentication failed, it was not created correctly.",
+                        baseContext, "Authentication failed: The email could be registered.",
                         Toast.LENGTH_SHORT
                     ).show()
-                    //updateUI(null)
+                    updateUI()
                 }
             }
     }
@@ -151,7 +158,7 @@ class RegisterActivity : AppCompatActivity() {
         val pass = et_rpassword.text.toString()
         clearFields()
 
-        val intent: Intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         intent.putExtra("email", email)
         intent.putExtra("pass", pass)

@@ -1,6 +1,9 @@
 package VEM.Movil.collapp
 
 import android.content.Context
+import android.graphics.ColorFilter
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -47,8 +50,14 @@ class AdapterStage : BaseAdapter {
         view = inflater.inflate(R.layout.item_stage, null)
 
         val tv_name_task: TextView = view.findViewById(R.id.tv_name_stage_text)
+        val bg : LinearLayout = view.findViewById(R.id.bg_stage)
+
 
         tv_name_task.text = stage
+
+        val ta = bg.resources.obtainTypedArray(R.array.colorsProject)
+        bg.background.colorFilter = PorterDuffColorFilter(ta.getColor(position%4,0), PorterDuff.Mode.SRC_ATOP)
+
 
         tv_name_task.setOnClickListener {
             val layoutInflater = LayoutInflater.from(view.context)
@@ -79,6 +88,8 @@ class AdapterStage : BaseAdapter {
             close.setOnClickListener {
                 pop.dismiss()
             }
+
+
 
             save.setOnClickListener {
                 val task: String = nameStage.text.toString()

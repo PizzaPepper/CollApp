@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Project Name"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textAlignment="center"
                 android:fontFamily="@font/samantha"/>
 

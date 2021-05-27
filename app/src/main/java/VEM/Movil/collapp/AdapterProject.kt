@@ -1,11 +1,20 @@
 package VEM.Movil.collapp
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
+import com.google.firebase.database.collection.LLRBNode
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat
@@ -55,6 +64,9 @@ class AdapterProject : BaseAdapter {
         var iv_image_project: ImageView = view.findViewById(R.id.image_project)
         var lv_list: ListView = view.findViewById(R.id.list_stages) // List of Stages
         var tv_date_project: TextView = view.findViewById(R.id.tv_date_project) // DeadLine
+
+        val ta = view.resources.obtainTypedArray(R.array.colorsProject)
+        view.background.colorFilter = PorterDuffColorFilter(ta.getColor(position%4,0), PorterDuff.Mode.SRC_ATOP)
 
         //Set icon favorites projects
         for (p in projectsFav ){
